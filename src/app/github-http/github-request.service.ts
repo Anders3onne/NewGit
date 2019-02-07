@@ -11,7 +11,7 @@ export class githubrequestService {
   repos: Repository;
 
   constructor(private http: HttpClient) {
-    this.repos = new Repository(0, 0, 0, "");
+    this.repos = new Repository(0, 0, 0, new Date(), "", "");
   }
 
   reposRequest(user) {
