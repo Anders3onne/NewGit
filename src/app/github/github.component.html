@@ -1,3 +1,17 @@
-<p>
-  github works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <app-user-form (add)="addNew($event)"></app-user-form>
+    </div>
+    <div class="col-md-6" id="two">
+      <img src={{repos.avatar_url}} height="200">
+      <p app>User Name:{{Users.name|andy}}</p>
+      <p appAll>Repositories:{{repos.public_repos}}</p>
+      <p appAll>Created:{{repos.created_at}}</p>
+      <p appAll>Followers:{{repos.followers}}</p>
+      <p appAll>Following:{{repos.following}}</p>
+      <a href={{repos.html_url}}><em>Link</em></a>
+    </div>
+  </div>
+</div>
+<footer>Copyright (c) 2019 Uwineza Adolatha</footer>
