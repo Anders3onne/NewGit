@@ -6,7 +6,7 @@ import { User } from "../user";
 @Injectable({
   providedIn: "root"
 })
-export class HttpRequestService {
+export class githubrequestService {
   user = new User("");
   repos: Repository;
 
@@ -19,13 +19,15 @@ export class HttpRequestService {
       public_repos: number;
       following: number;
       followers: number;
-      public_gists: string;
+      created_at: Date;
+      html_url: string;
+      avatar_url: string;
     }
     let promise = new Promise((resolve, reject) => {
       this.http
         .get<ApiResponse>(
           "https://api.github.com/users/" +
-            this.user.name +
+            user.name +
             "?access_token=" +
             environment.api_key
         )
@@ -35,17 +37,18 @@ export class HttpRequestService {
             this.repos.public_repos = response.public_repos;
             this.repos.following = response.following;
             this.repos.followers = response.followers;
-            this.repos.public_gists = response.public_gists;
+            this.repos.created_at = response.created_at;
+            this.repos.html_url = response.html_url;
+            this.repos.avatar_url = response.avatar_url;
 
             resolve();
           },
           error => {
             reject(error);
-            console.log(error);
+            console.log(user.name);
           }
         );
     });
-
     return promise;
   }
 }
