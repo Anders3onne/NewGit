@@ -1,0 +1,16 @@
+body {
+  background-color: grey;
+}
+
+#two {
+  color: black;
+  border: red;
+  /* width: 20000%; */
+  /* height: 2000px; */
+
+}
+
+#three {
+  color: green;
+  font-family: 'Times New Roman', Times, serif;
+}
