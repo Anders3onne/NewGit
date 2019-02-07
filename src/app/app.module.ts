@@ -12,6 +12,7 @@ import { ProvisionComponent } from './provision/provision.component';
 import { mamiePipe } from './mamie.pipe';
 import { NanaDirective } from './nana.directive';
 import { AndyPipe } from './andy.pipe';
+import { AllDirective } from './all.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AndyPipe } from './andy.pipe';
     // AboutComponent,
     mamiePipe,
     NanaDirective,
-    AndyPipe
+    AndyPipe,
+    AllDirective
   ],
   imports: [
     BrowserModule,
