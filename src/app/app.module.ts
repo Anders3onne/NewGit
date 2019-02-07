@@ -1,22 +1,35 @@
+mport { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GithubComponent } from './github/github.component';
-import { UserformComponent } from './userform/userform.component';
-import { RepositoryComponent } from './repository/repository.component';
+import { UserFormComponent } from './user-form/user-form.component';
+import { ProvisionComponent } from './provision/provision.component';
+// import { AboutComponent } from './about/about.component';
+import { mamiePipe } from './mamie.pipe';
+import { NanaDirective } from './nana.directive';
+import { AndyPipe } from './andy.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GithubComponent,
-    UserformComponent,
-    RepositoryComponent
+    UserFormComponent,
+    ProvisionComponent,
+    NanaDirective,
+    // AboutComponent,
+    mamiePipe,
+    NanaDirective,
+    AndyPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    // RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
