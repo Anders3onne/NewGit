@@ -1,6 +1,6 @@
 # Project: Github
 
-Author: Uwineza Adolatha
+## Author: Uwineza Adolatha
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2., to help in searching Github users infos and accounts.
 
@@ -29,6 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 If you need further info or any help: uwinezaandersonne@gmail.com
 
-## License
+## Copyright and License
 
 MIT License Copyright© 2019 Uwineza Adolatha.
