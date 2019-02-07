@@ -1,12 +1,12 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { GithubRequestService } from './github-request.service';
+import { githubrequestService } from "./github-request.service";
 
-describe('GithubRequestService', () => {
+describe("githubrequestService", () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
-    const service: GithubRequestService = TestBed.get(GithubRequestService);
+  it("should be created", () => {
+    const service: githubrequestService = TestBed.get(githubrequestService);
     expect(service).toBeTruthy();
   });
 });
