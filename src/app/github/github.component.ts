@@ -1,12 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { User } from "../user";
 import { HttpClient } from "@angular/common/http";
-import { GithubRequestService } from "../github-http/github-request.service";
+import { githubrequestService } from "../github-http/github-request.service";
 import { Repository } from "../repository";
 @Component({
   selector: "app-github",
   templateUrl: "./github.component.html",
-  providers: [GithubRequestService],
+  providers: [githubrequestService],
   styleUrls: ["./github.component.css"]
 })
 export class GithubComponent implements OnInit {
@@ -19,7 +19,7 @@ export class GithubComponent implements OnInit {
   }
   constructor(
     private http: HttpClient,
-    private reposRequest: GithubRequestService
+    private reposRequest: githubrequestService
   ) {
     this.Users = new User("");
     this.repos = new Repository(0, 0, 0, new Date(), "", "");
